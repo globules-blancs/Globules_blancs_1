@@ -1,12 +1,12 @@
-/* Variables & Reset de base - Thème Noir / Blanc / Gris */
+/* Variables & Reset de base - Thème Blanc / Noir / Gris (Inversé) */
 :root {
-  --bg-color: #0a0a0a;         /* Noir profond */
-  --card-bg: #171717;        /* Gris très foncé pour les cartes */
-  --border-color: #262626;   /* Gris foncé pour les bordures */
-  --text-color: #ffffff;     /* Blanc pur */
-  --text-muted: #a3a3a3;     /* Gris clair pour les sous-titres */
-  --accent-color: #ffffff;   /* Blanc pour l'élément actif / accent */
-  --btn-hover: #e5e5e5;      /* Gris très clair au survol */
+  --bg-color: #ffffff;         /* Blanc pur pour le fond */
+  --card-bg: #f5f5f5;        /* Gris très clair pour les cartes */
+  --border-color: #e5e5e5;   /* Gris clair pour les bordures */
+  --text-color: #0a0a0a;     /* Noir profond pour les textes principaux */
+  --text-muted: #525252;     /* Gris foncé pour les sous-titres */
+  --accent-color: #0a0a0a;   /* Noir pour l'élément actif */
+  --btn-hover: #262626;      /* Gris foncé au survol des boutons */
   --font-family: system-ui, -apple-system, sans-serif;
 }
 
@@ -123,7 +123,7 @@ main {
 }
 
 .card:hover {
-  border-color: #525252;
+  border-color: #a3a3a3;
   transform: translateY(-2px);
 }
 
