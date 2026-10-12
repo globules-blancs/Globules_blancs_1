@@ -1,10 +1,12 @@
-/* Variables & Reset de base */
+/* Variables & Reset de base - Thème Noir / Blanc / Gris */
 :root {
-  --bg-color: #0f172a;
-  --card-bg: #1e293b;
-  --text-color: #f8fafc;
-  --text-muted: #94a3b8;
-  --accent-color: #38bdf8;
+  --bg-color: #0a0a0a;         /* Noir profond */
+  --card-bg: #171717;        /* Gris très foncé pour les cartes */
+  --border-color: #262626;   /* Gris foncé pour les bordures */
+  --text-color: #ffffff;     /* Blanc pur */
+  --text-muted: #a3a3a3;     /* Gris clair pour les sous-titres */
+  --accent-color: #ffffff;   /* Blanc pour l'élément actif / accent */
+  --btn-hover: #e5e5e5;      /* Gris très clair au survol */
   --font-family: system-ui, -apple-system, sans-serif;
 }
 
@@ -33,7 +35,7 @@ body {
 
 /* En-tête & Navigation */
 header {
-  border-bottom: 1px solid var(--card-bg);
+  border-bottom: 1px solid var(--border-color);
   padding: 1.5rem 0;
 }
 
@@ -48,6 +50,7 @@ nav {
   font-size: 1.2rem;
   color: var(--text-color);
   text-decoration: none;
+  letter-spacing: -0.5px;
 }
 
 nav ul {
@@ -60,11 +63,13 @@ nav a {
   color: var(--text-muted);
   text-decoration: none;
   font-weight: 500;
-  transition: color 0.2s;
+  transition: color 0.2s ease;
 }
 
 nav a:hover, nav a.active {
-  color: var(--accent-color);
+  color: var(--text-color);
+  border-bottom: 2px solid var(--text-color);
+  padding-bottom: 0.25rem;
 }
 
 /* Contenu Principal */
@@ -76,6 +81,7 @@ main {
 .hero h1 {
   font-size: 2.5rem;
   margin-bottom: 1rem;
+  font-weight: 700;
 }
 
 .hero p {
@@ -84,14 +90,20 @@ main {
   margin-bottom: 2rem;
 }
 
+/* Boutons */
 .btn {
   display: inline-block;
-  background-color: var(--accent-color);
-  color: #0f172a;
+  background-color: var(--text-color);
+  color: var(--bg-color);
   padding: 0.75rem 1.5rem;
   border-radius: 6px;
   text-decoration: none;
   font-weight: 600;
+  transition: background-color 0.2s ease;
+}
+
+.btn:hover {
+  background-color: var(--btn-hover);
 }
 
 /* Grille de projets */
@@ -106,29 +118,41 @@ main {
   background-color: var(--card-bg);
   padding: 1.5rem;
   border-radius: 8px;
-  border: 1px solid rgba(255, 255, 255, 0.05);
+  border: 1px solid var(--border-color);
+  transition: border-color 0.2s ease, transform 0.2s ease;
+}
+
+.card:hover {
+  border-color: #525252;
+  transform: translateY(-2px);
 }
 
 .card h3 {
   margin-bottom: 0.5rem;
+  color: var(--text-color);
 }
 
 .card p {
   color: var(--text-muted);
   font-size: 0.95rem;
-  margin-bottom: 1rem;
+  margin-bottom: 1.25rem;
 }
 
 .link {
-  color: var(--accent-color);
+  color: var(--text-color);
   text-decoration: none;
   font-size: 0.9rem;
-  font-weight: 500;
+  font-weight: 600;
+  transition: opacity 0.2s ease;
+}
+
+.link:hover {
+  opacity: 0.7;
 }
 
 /* Pied de page */
 footer {
-  border-top: 1px solid var(--card-bg);
+  border-top: 1px solid var(--border-color);
   padding: 2rem 0;
   text-align: center;
   color: var(--text-muted);
@@ -136,6 +160,10 @@ footer {
 }
 
 footer a {
-  color: var(--accent-color);
-  text-decoration: none;
+  color: var(--text-color);
+  text-decoration: underline;
+}
+
+footer a:hover {
+  color: var(--text-muted);
 }
